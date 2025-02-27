@@ -1,11 +1,15 @@
 package nampnguyen.app.practices.projecteuler.entity.problem21;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -15,7 +19,7 @@ import lombok.Data;
 public class Problem21Entity {
 
     @Id
-    @Column(length = 32, nullable = false)
+    @Column(length = 36, nullable = false)
     private String id;
 
     @Column(name = "upper_bound", length = 255, nullable = false)
@@ -39,4 +43,7 @@ public class Problem21Entity {
 
     @Column(name = "update_by", length = 255)
     private String updatedBy;
+
+    @OneToMany(mappedBy = "problem21", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Problem21AmicablePairsEntity> amicablePairs = new ArrayList<>();
 }

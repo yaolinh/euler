@@ -15,7 +15,7 @@ import lombok.Data;
 @Table(name="problem21_amicable_pairs")
 public class Problem21AmicablePairsEntity {
     @Id
-    @Column(length = 32, nullable = false)
+    @Column(length = 36, nullable = false)
     private String id;
 
     @ManyToOne

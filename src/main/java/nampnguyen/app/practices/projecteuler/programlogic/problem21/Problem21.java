@@ -57,8 +57,6 @@ public class Problem21 extends Solution{
         log.info("Finish to persist data to database");
     }
 
-    //TODO: Implement the following methods
-    //Under devloping.
     @Transactional
     private void persist(Problem21Data data) {
         traceLog.append("Begin to persist data to database").append(logDelimiter);
