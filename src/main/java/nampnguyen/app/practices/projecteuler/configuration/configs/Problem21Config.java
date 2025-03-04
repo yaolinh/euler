@@ -15,6 +15,7 @@ import lombok.Data;
 @ConfigurationProperties(prefix = "namnp.app.euler.config.problem21")
 public class Problem21Config {
     private BigInteger upperBound;
+    private String resultMessage;
 
     @PostConstruct
     public void init() {

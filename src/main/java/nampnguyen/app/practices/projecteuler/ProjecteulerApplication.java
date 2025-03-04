@@ -36,30 +36,30 @@ public class ProjecteulerApplication {
         SpringApplication.run(ProjecteulerApplication.class, args);
     }
 
-    @EventListener(ApplicationReadyEvent.class)
-    public void onApplicationReady() throws CloneNotSupportedException {
-        solveProblem21();
-    }
+    // @EventListener(ApplicationReadyEvent.class)
+    // public void onApplicationReady() throws CloneNotSupportedException {
+    //     solveProblem21();
+    // }
 
-    private void solveProblem19(){
-        LocalDate fromDate = LocalDate.parse("1901-01-01", DateTimeFormatter.ISO_DATE);
-        LocalDate toDate = LocalDate.parse("2000-12-31", DateTimeFormatter.ISO_DATE);
-        problem19.setFromDate(fromDate);
-        problem19.setToDate(toDate);
-        problem19.solve();
-    }
+    // private void solveProblem19(){
+    //     LocalDate fromDate = LocalDate.parse("1901-01-01", DateTimeFormatter.ISO_DATE);
+    //     LocalDate toDate = LocalDate.parse("2000-12-31", DateTimeFormatter.ISO_DATE);
+    //     problem19.setFromDate(fromDate);
+    //     problem19.setToDate(toDate);
+    //     problem19.solve();
+    // }
 
-    private void solveProblem18(){
-        log.info("Solve the problem 18");
-        // Your logic here
-		// problem18.solve();
-    }
+    // private void solveProblem18(){
+    //     log.info("Solve the problem 18");
+    //     // Your logic here
+	// 	// problem18.solve();
+    // }
 
-    private void solveProblem20(){
-        problem20.solve();
-    }
+    // private void solveProblem20(){
+    //     problem20.solve();
+    // }
 
-    private void solveProblem21(){
-        problem21.solve();
-    }
+    // private void solveProblem21(){
+    //     problem21.solve();
+    // }
 }

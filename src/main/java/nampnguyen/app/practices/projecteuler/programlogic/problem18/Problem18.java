@@ -19,6 +19,7 @@ import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import nampnguyen.app.practices.projecteuler.common.model.Solution;
 import nampnguyen.app.practices.projecteuler.configuration.configs.Problem18Config;
+import nampnguyen.app.practices.projecteuler.model.Result;
 import nampnguyen.app.practices.projecteuler.model.problem18.Node;
 
 @Getter
@@ -91,7 +92,7 @@ public class Problem18 extends Solution{
     }
 
     @Override
-    public void solve() {
+    public Result solve() {
         this.initialize();
         boolean running = true;
         List<Node> maxPathSum = new ArrayList<>();
@@ -163,6 +164,7 @@ public class Problem18 extends Solution{
         }
         this.displayResult(true, maxPathSum, max);
         // log.info("Max path sum: {}, with ", maxPathSum.toString());
+        return new Result();
     }
     
     private void displayResult(boolean toLog, List<Node> maxPathSum, int sum){

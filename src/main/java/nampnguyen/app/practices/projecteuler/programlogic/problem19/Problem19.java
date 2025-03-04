@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import nampnguyen.app.practices.projecteuler.common.model.Solution;
+import nampnguyen.app.practices.projecteuler.model.Result;
 
 @Component
 @Slf4j
@@ -52,10 +53,11 @@ public class Problem19 extends Solution {
     }
 
     @Override
-    public void solve() {
+    public Result solve() {
         log.info("Begin solve problem 19...");
         log.info("There are {} sundays from {} to {}.", countSunday(this.fromDate, this.toDate), DateTimeFormatter.ISO_DATE.format(fromDate), DateTimeFormatter.ISO_DATE.format(toDate));
         log.info("Finish solve problem 19...");
+        return new Result<>();
     }
 
 }

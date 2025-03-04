@@ -1,5 +1,7 @@
 package nampnguyen.app.practices.projecteuler.common.model;
 
-public abstract class Solution {
-    public abstract void solve();
+import nampnguyen.app.practices.projecteuler.model.Result;
+
+public abstract class Solution<T> {
+    public abstract Result<T> solve();
 }

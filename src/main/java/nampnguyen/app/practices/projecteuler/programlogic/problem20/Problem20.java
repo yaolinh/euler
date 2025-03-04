@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 
 import lombok.extern.slf4j.Slf4j;
 import nampnguyen.app.practices.projecteuler.common.model.Solution;
+import nampnguyen.app.practices.projecteuler.model.Result;
 
 
 @Component
@@ -14,7 +15,7 @@ import nampnguyen.app.practices.projecteuler.common.model.Solution;
 public class Problem20 extends Solution{
 
     @Override
-    public void solve() {
+    public Result solve() {
         // TODO Auto-generated method stub
         String base = "100";
         int sum = 0;
@@ -32,6 +33,7 @@ public class Problem20 extends Solution{
         }
         
         log.info("The sum digit of factorial of {} is {}, with factored result is {}", base, sum, factorialResult);  
+        return new Result();
     }
     
     private BigInteger factorial(BigInteger base){
